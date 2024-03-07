@@ -832,6 +832,67 @@ const drive_settings builtin_knowndrives[] = {
     "-v 248,raw48,Lifetime_Remaining% " //  later then 0409 FW.
     "-v 249,raw48,Spares_Remaining_Perc " //  later then 0409 FW.
   },
+  { "Virtium M.2 SATA 6Gbps SSDs",
+    ".*VSFBM4[CX][CI](016|030|032|060|120|256)G-.*",
+    // C - Commercial, I - Industrial
+    "", "",
+    "-v 160,raw48,Uncorrectable_Count "
+    "-v 161,raw48,Spares_Remaining "
+    "-v 163,raw48,Initial_Invalid_Blocks "
+    "-v 164,raw48,Total_Erase_Count "
+    "-v 165,raw48,Maximum_Erase_Count "
+    "-v 166,raw48,Minimum_Erase_Count "
+    "-v 167,raw48,Average_Erase_Count "
+    "-v 168,raw48,NAND_Endurance "
+    "-v 178,raw48,Runtime_Invalid_Blocks "
+    "-v 192,raw48,Unsafe_Power_Off_Cnt "
+    "-v 248,raw48,Remaining_Life_Left% "
+    "-v 249,raw48,Spare_Blocks_Remaining% "
+  },
+  { "Virtium M.2 SATA 6Gbps SSDs",
+    ".*VSFDM4C[CI](120|240)G-.*",
+    // C - Commercial, I - Industrial
+    "", "",
+    "-v 1,raw48,Reported_UECC_Count "
+    "-v 5,raw48,Reallocated_Blk_Cnt "
+    "-v 14,raw48,Device_Raw_Capacity "
+    "-v 15,raw48,Device_User_Capacity "
+    "-v 16,raw48,Spare_Blk_Count "
+    "-v 17,raw48,Spare_Blk_Left "
+    "-v 100,raw48,Total_Erase_Count "
+    "-v 168,raw48,SATA_PHY_Error_Count "
+    "-v 170,raw48,Total_Bad_Blk_Count "
+    "-v 172,raw48,Total_Blk_Erase_Fail "
+    "-v 173,raw48,Max_TLC_PE_Cycle_Count "
+    "-v 174,raw48,Unexpected_Pwr_Loss_Cnt "
+    "-v 175,raw48,Average_Erase_Count "
+    "-v 198,raw48,RAID_Recovery_Count "
+    "-v 202,raw48,Drive_Life_Used% "
+    "-v 231,raw48,Drive_Life_Remain% "
+    "-v 232,raw48,RAID_Trigger_Count "
+    "-v 234,raw48,Total_Flash_Sectors_Rds "
+    "-v 235,raw48,Total_TLC_Flash_Sct_Wrt "
+    "-v 247,raw48,Total_SLC_Flash_Sct_Wrt "
+    "-v 248,raw48,Avg_SLC_PE_Cycle_On_SBk "
+  },
+  { "Virtium M.2 SATA 6Gbps SSDs",
+    ".*VSFEM4X[CI](032)G-.*",
+    // C - Commercial, I - Industrial
+    "", "",
+    "-v 160,raw48,Uncorrectable_Sct_Cnt "
+    "-v 161,raw48,Spare_Blk_Count "
+    "-v 163,raw48,Init_Invalid_Block_Cnt "
+    "-v 164,raw48,Total_Erase_Cnt "
+    "-v 165,raw48,Maximum_Erase_Count "
+    "-v 166,raw48,Minimum_Erase_Count "
+    "-v 167,raw48,Average_Erase_Count "
+    "-v 168,raw48,NAND_Endurance "
+    "-v 192,raw48,Unsafe_Power_Off_Cnt " 
+    "-v 248,raw48,Remaining_Life_Left% "
+    "-v 249,raw48,Remaining_Spare_Blk% "
+    "-v 250,raw48,Total_Wrtn_SLC_NAND "
+    "-v 251,raw48,Total_Wrtn_TLC_NAND "
+  },
   { "Phison Driven SSDs", // see MKP_521_Phison_SMART_attribute.pdf
     "BP4 mSATA SSD|" // MyDigital BP4, tested with BP4 mSATA SSD/S8FM06.9
     "Corsair Force LE(200)? SSD|" // tested with Corsair Force LE SSD/SAFC11.0,
