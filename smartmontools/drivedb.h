@@ -833,7 +833,7 @@ const drive_settings builtin_knowndrives[] = {
     "-v 249,raw48,Spares_Remaining_Perc " //  later then 0409 FW.
   },
   { "Virtium M.2 SATA 6Gbps SSDs",
-    ".*VSFBM4[CX][CI](016|030|032|060|120|256)G-.*",
+    ".*VSFBM[4|8][CX][CI](016|030|032|060|120|256)G-.*",
     // C - Commercial, I - Industrial
     "", "",
     "-v 160,raw48,Uncorrectable_Count "
