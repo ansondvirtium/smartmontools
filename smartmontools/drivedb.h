@@ -836,6 +836,8 @@ const drive_settings builtin_knowndrives[] = {
     ".*VSFBM[4|8][CX][CI](016|030|032|060|120|256)G-.*",
     // C - Commercial, I - Industrial
     "", "",
+    "-v 16,raw48,Valid_Spare_Blocks "
+    "-v 17,raw48,Remaining_Spare_Blocks "
     "-v 160,raw48,Uncorrectable_Count "
     "-v 161,raw48,Spares_Remaining "
     "-v 163,raw48,Initial_Invalid_Blocks "
@@ -846,6 +848,7 @@ const drive_settings builtin_knowndrives[] = {
     "-v 168,raw48,NAND_Endurance "
     "-v 178,raw48,Runtime_Invalid_Blocks "
     "-v 192,raw48,Unsafe_Power_Off_Cnt "
+    "-v 231,raw48,Remaining_Life_Left% "
     "-v 248,raw48,Remaining_Life_Left% "
     "-v 249,raw48,Spare_Blocks_Remaining% "
   },
